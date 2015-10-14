@@ -23,7 +23,7 @@ robots:
   avatar: stevebotforlyfe
   birthdate: '1985-06-20'
   date_hired: '2008-09-10'
-  department: Idk
+  department: Tech
 - id: 4
   name: YoungBot
   city: Los Angeles
@@ -31,7 +31,7 @@ robots:
   avatar: calibotsarecool
   birthdate: '2015-01-01'
   date_hired: '2015-05-04'
-  department: Nothing
+  department: Snack Management
 - id: 5
   name: OldBot
   city: Atlanta
@@ -40,12 +40,60 @@ robots:
   birthdate: '1940-02-09'
   date_hired: '2009-08-08'
   department: Nap Management
-- id: 7
+- id: 6
   name: TestBot
-  city: a
-  state: a
-  avatar: a
-  birthdate: 0000-00-00
-  date_hired: 0000-00-00
+  city: Somerset
+  state: New Jersey
+  avatar: apwqugivlbwdc1
+  birthdate: '1987-04-07'
+  date_hired: '2011-09-21'
   department: Tech
-total: 7
+- id: 7
+  name: SuperCoolBot
+  city: Denver
+  state: Colorado
+  avatar: iqsdvb201
+  birthdate: '1990-12-31'
+  date_hired: '2010-01-01'
+  department: Nap Management
+- id: 8
+  name: AnotherBot
+  city: Savannah
+  state: Georgia
+  avatar: oiqdhvb78ofrf
+  birthdate: '2000-11-12'
+  date_hired: '2010-05-28'
+  department: Nap Management
+- id: 9
+  name: AndrewBot
+  city: Denver
+  state: Colorado
+  avatar: iqwyrf8oq4
+  birthdate: '1990-12-12'
+  date_hired: '2015-08-10'
+  department: Tech
+- id: 10
+  name: RachelBot
+  city: Denver
+  state: Colorado
+  avatar: racheliscool
+  birthdate: '1990-01-01'
+  date_hired: '2014-06-10'
+  department: Nap Management
+- id: 11
+  name: PatBot
+  city: Hunterdon
+  state: New Jersey
+  avatar: patweycool
+  birthdate: '1990-01-10'
+  date_hired: '2015-10-13'
+  department: Snack Management
+- id: 12
+  name: MattBot
+  city: Pueblo
+  state: Colorado
+  avatar: mattbotissocool
+  birthdate: '1988-04-04'
+  date_hired: '2015-01-01'
+  department: Nap Management
+total: 12
