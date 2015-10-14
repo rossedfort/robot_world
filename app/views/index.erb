@@ -10,21 +10,11 @@
   <div class="well col-md-6 text-center">
     <% @robots[(0..((@robots.size)/2)-1)].each do |bot| %>
       <h3><%= bot.id %>: <a href="/bots/<%= bot.id %>"> <%= bot.name %><br></a></h3>
-        <a href="/bots/<%= bot.id %>/edit"><button class="btn btn-info">Edit</button></a>
-        <form action="/bots/<%= bot.id %>" method="POST"><br>
-          <input type="hidden" name="_method" value="delete">
-          <button class="btn btn-warning" type="submit">Delete</button>
-        </form>
     <% end %>
   </div>
   <div class="well col-md-6 text-center">
     <% @robots[(@robots.size)/2..(@robots.size)].each do |bot| %>
       <h3><%= bot.id %>: <a href="/bots/<%= bot.id %>"> <%= bot.name %><br></a></h3>
-        <a href="/bots/<%= bot.id %>/edit"><button class="btn btn-info">Edit</button></a>
-        <form action="/bots/<%= bot.id %>" method="POST"><br>
-          <input type="hidden" name="_method" value="delete">
-          <button class="btn btn-warning" type="submit">Delete</button>
-        </form>
     <% end %>
   </div>
 </div>

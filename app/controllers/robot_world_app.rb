@@ -24,11 +24,13 @@ class RobotWorldApp < Sinatra::Base
 
   get '/bots/:id' do |id|
     @robot = RobotWorld.find(id.to_i)
+    @robots = RobotWorld.all
     erb :show
   end
 
   get '/bots/:id/edit' do |id|
     @robot = RobotWorld.find(id.to_i)
+    @robots = RobotWorld.all
     erb :edit
   end
 

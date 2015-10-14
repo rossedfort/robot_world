@@ -4,7 +4,6 @@
   <a class='navbar navbar-brand navbar-link nav navbar-nav' href="/dashboard">Dashboard</a>
 </div>
 
-
 <div class="container-fluid">
   <div class="row well text-center">
     <h1>Name: <%= @robot.name %></h1>
@@ -14,5 +13,10 @@
     <h4>State: <%= @robot.state %></h4>
     <h4>Date Hired: <%= @robot.date_hired %></h4>
     <h4>Department: <%= @robot.department %></h4>
+    <a href="/bots/<%= @robot.id %>/edit"><button class="btn btn-info">Edit</button></a>
+      <form action="/bots/<%= @robot.id %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button class="btn btn-warning" type="submit">Delete</button>
+      </form>
   </div>
 </div>
