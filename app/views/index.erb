@@ -1,0 +1,19 @@
+<div class='container-fluid'>
+  <div class='container-fluid navbar navbar-default'>
+    <a class='container-fluid navbar navbar-brand navbar-link nav navbar-nav' href="/">Home</a>
+    <a class='container-fluid navbar navbar-brand navbar-link nav navbar-nav' href="/bots/new">New</a>
+  </div>
+
+<div class='well text-center'>
+    <h1>All Bots</h1>
+
+    <% @robots.each do |bot| %>
+      <h3><%= bot.id %>: <a href="/bots/<%= bot.id %>"> <%= bot.name %><br></a></h3>
+      <a href="/bots/<%= bot.id %>/edit" class="btn btn-info" role="button">Edit</a>
+      <form action="/bots/<%= bot.id %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <input class="btn btn-warning" type="submit" value="Delete">
+      </form>
+    <% end %>
+  </div>
+</div>

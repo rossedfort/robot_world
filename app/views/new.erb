@@ -1,0 +1,20 @@
+<div class='container-fluid row text-center'>
+  <form action="/bots" method="post">
+    <div class='container-fluid navbar navbar-default'>
+      <a class='nav navbar-nav navbar-link navbar-btn navbar-brand' href="/bots">Cancel</a>
+    </div>
+    <div class="container-fluid">
+      <div class='row well'>
+        <h1>Make a New Bot!</h1>
+        <input class='input-lg' type='text' name='robot[name]' placeholder='name'/><br><br>
+        <textarea class='input-sm' name='robot[birthdate]' placeholder='birthdate mm-dd-yyyy'></textarea><br>
+        <textarea class='input-sm' name='robot[city]' placeholder='city'></textarea><br>
+        <textarea class='input-sm' name='robot[state]' placeholder='state'></textarea><br>
+        <textarea class='input-sm' name='robot[avatar]' placeholder='whatever you want :)'></textarea><br>
+        <textarea class='input-sm' name='robot[date_hired]' placeholder='date hired'></textarea><br>
+        <textarea class='input-sm' name='robot[department]' placeholder='department'></textarea><br>
+        <input class='btn btn-xs btn-success' type='submit'/>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<div class='container-fluid navbar navbar-default'>
+  <a class='nav navbar-nav navbar-link navbar-btn navbar-brand' href="/">Home</a>
+  <a class='nav navbar-nav navbar-link navbar-btn navbar-brand' href="/bots">Bot Index</a>
+</div>
+
+<div class="container-fluid">
+  <div class="row well text-center">
+    <h1>Name: <%= @robot.name %></h1>
+    <img src="https://robohash.org/<%= @robot.avatar %>.png">
+    <p>Birthdate: <%= @robot.birthdate %></p>
+    <p>City: <%= @robot.city %></p>
+    <p>State: <%= @robot.state %></p>
+    <p>Date Hired: <%= @robot.date_hired %></p>
+    <p>Department: <%= @robot.department %></p>
+  </div>
+</div>

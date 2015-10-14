@@ -1,0 +1,21 @@
+<div class='container-fluid row text-center'>
+  <form action="/bots/<%= @robot.id %>" method="post">
+    <div class='container-fluid navbar navbar-default'>
+      <a class='nav navbar-nav navbar-link navbar-btn navbar-brand' href="/bots">Back</a>
+    </div>
+    <div class="container-fluid">
+      <div class='row well'>
+        <h1>Edit Your Robot's Info:</h1>
+        <input type="hidden" name="_method" value="PUT"/>
+        <input class='input-lg' type='text' name='robot[name]' value="<%= @robot.name %>"/><br/><br>
+        <textarea class='input-lg' name='robot[birthdate]'><%= @robot.birthdate %></textarea><br/>
+        <textarea class='input-lg' name='robot[city]'><%= @robot.city %></textarea><br/>
+        <textarea class='input-lg' name='robot[state]'><%= @robot.state %></textarea><br/>
+        <textarea class='input-lg' name='robot[avatar]'><%= @robot.avatar %></textarea><br/>
+        <textarea class='input-lg' name='robot[date_hired]'><%= @robot.date_hired %></textarea><br/>
+        <textarea class='input-lg' name='robot[department]'><%= @robot.department %></textarea><br/>
+        <input class='btn btn-xs btn-success' type='submit'/>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,19 @@
+---
+robots:
+- id: 1
+  name: RossBot
+  city: Denver
+  state: Colorado
+  avatar: rossissocool
+  birthdate: 01-04-1993
+  date_hired: 10-13-2015
+  department: Tech
+- id: 3
+  name: TheCOoOlestBot
+  city: Nowhere
+  state: Colorado
+  avatar: thecoolestbot12345
+  birthdate: 12-34-5678
+  date_hired: yesterday
+  department: snacks
+total: 3
