@@ -1,0 +1,25 @@
+<div class='container-fluid navbar navbar-default'>
+  <a class='nav navbar-nav navbar-link navbar-btn navbar-brand' href="/">Home</a>
+  <a class='nav navbar-nav navbar-link navbar-btn navbar-brand' href="/bots">Bot Index</a>
+</div>
+
+<div class='container-fluid'>
+  <div class='row text-center white-text'>
+    <h1 class='white-text'>Dashboard</h1>
+  </div>
+  <div class='well'>
+    <% time = Time.new %>
+    <% year = time.year %>
+    <% ages = @robots.map { |bot| year - bot.birthdate[0..4].to_i }.reduce(:+).to_f/@robots.size.to_f  %>
+    <% years = @robots.map { |bot| bot.date_hired[0..4].to_i }.inject(Hash.new(0)) {|year,count| year[count] += 1; year }%>
+    <% departments = @robots.map { |bot| bot.department }.inject(Hash.new(0)) {|department,count| department[count] += 1; department }  %>
+    <% cities = @robots.map { |bot| bot.city }.inject(Hash.new(0)) {|city,count| city[count] += 1; city }  %>
+    <% states = @robots.map { |bot| bot.state }.inject(Hash.new(0)) {|state,count| state[count] += 1; state }  %>
+
+    <h3>Average Age: <%= ages %> </h3>
+    <h3>Hired by Year: <%= years %> </h3>
+    <h3>Departments: <%= departments %> </h3>
+    <h3>Cities: <%= cities %> </h3>
+    <h3>States: <%= states %> </h3>
+  </div>
+</div>

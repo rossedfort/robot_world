@@ -4,16 +4,48 @@ robots:
   name: RossBot
   city: Denver
   state: Colorado
-  avatar: rossissocool
-  birthdate: 01-04-1993
-  date_hired: 10-13-2015
+  avatar: rossisthecoolest
+  birthdate: '1993-01-04'
+  date_hired: '2015-10-13'
   department: Tech
-- id: 3
+- id: 2
   name: TheCOoOlestBot
-  city: Nowhere
+  city: Boulder
   state: Colorado
-  avatar: thecoolestbot12345
-  birthdate: 12-34-5678
-  date_hired: yesterday
-  department: snacks
-total: 3
+  avatar: thecoolestbotaround
+  birthdate: '2000-10-10'
+  date_hired: '2010-04-20'
+  department: Snack Management
+- id: 3
+  name: SteveBot
+  city: Jersey City
+  state: New Jersey
+  avatar: stevebotforlyfe
+  birthdate: '1985-06-20'
+  date_hired: '2008-09-10'
+  department: Idk
+- id: 4
+  name: YoungBot
+  city: Los Angeles
+  state: California
+  avatar: calibotsarecool
+  birthdate: '2015-01-01'
+  date_hired: '2015-05-04'
+  department: Nothing
+- id: 5
+  name: OldBot
+  city: Atlanta
+  state: Georgia
+  avatar: oldaspoo
+  birthdate: '1940-02-09'
+  date_hired: '2009-08-08'
+  department: Nap Management
+- id: 7
+  name: TestBot
+  city: a
+  state: a
+  avatar: a
+  birthdate: 0000-00-00
+  date_hired: 0000-00-00
+  department: Tech
+total: 7

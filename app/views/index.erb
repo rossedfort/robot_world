@@ -9,11 +9,11 @@
 
     <% @robots.each do |bot| %>
       <h3><%= bot.id %>: <a href="/bots/<%= bot.id %>"> <%= bot.name %><br></a></h3>
-      <a href="/bots/<%= bot.id %>/edit" class="btn btn-info" role="button">Edit</a>
-      <form action="/bots/<%= bot.id %>" method="POST">
-        <input type="hidden" name="_method" value="delete">
-        <input class="btn btn-warning" type="submit" value="Delete">
-      </form>
+        <a href="/bots/<%= bot.id %>/edit"><button class="btn btn-info">Edit</button></a>
+        <form action="/bots/<%= bot.id %>" method="POST">
+          <input type="hidden" name="_method" value="delete">
+          <button class="btn btn-warning" type="submit">Delete</button>
+        </form>
     <% end %>
   </div>
 </div>
