@@ -31,15 +31,15 @@ robots:
   avatar: calibotsarecool
   birthdate: '2015-01-01'
   date_hired: '2015-05-04'
-  department: Snack Management
+  department: Nap Management
 - id: 5
   name: OldBot
-  city: Atlanta
-  state: Georgia
+  city: Portland
+  state: Oregon
   avatar: oldaspoo
   birthdate: '1940-02-09'
   date_hired: '2009-08-08'
-  department: Nap Management
+  department: Snack Management
 - id: 6
   name: TestBot
   city: Somerset
@@ -49,30 +49,22 @@ robots:
   date_hired: '2011-09-21'
   department: Tech
 - id: 7
-  name: SuperCoolBot
-  city: Denver
-  state: Colorado
-  avatar: iqsdvb201
-  birthdate: '1990-12-31'
-  date_hired: '2010-01-01'
-  department: Nap Management
-- id: 8
   name: AnotherBot
-  city: Savannah
-  state: Georgia
+  city: San Francisco
+  state: California
   avatar: oiqdhvb78ofrf
   birthdate: '2000-11-12'
   date_hired: '2010-05-28'
-  department: Nap Management
-- id: 9
+  department: Snack Management
+- id: 8
   name: AndrewBot
   city: Denver
   state: Colorado
   avatar: iqwyrf8oq4
   birthdate: '1990-12-12'
   date_hired: '2015-08-10'
-  department: Tech
-- id: 10
+  department: Nap Management
+- id: 9
   name: RachelBot
   city: Denver
   state: Colorado
@@ -80,7 +72,7 @@ robots:
   birthdate: '1990-01-01'
   date_hired: '2014-06-10'
   department: Nap Management
-- id: 11
+- id: 10
   name: PatBot
   city: Hunterdon
   state: New Jersey
@@ -88,7 +80,7 @@ robots:
   birthdate: '1990-01-10'
   date_hired: '2015-10-13'
   department: Snack Management
-- id: 12
+- id: 11
   name: MattBot
   city: Pueblo
   state: Colorado
@@ -96,4 +88,28 @@ robots:
   birthdate: '1988-04-04'
   date_hired: '2015-01-01'
   department: Nap Management
-total: 12
+- id: 12
+  name: SuperBot
+  city: Colorado Springs
+  state: Colorado
+  avatar: 9w8rufoqqb
+  birthdate: '1980-04-01'
+  date_hired: '2011-05-26'
+  department: Tech
+- id: 13
+  name: SmartBot
+  city: Boulder
+  state: Colorado
+  avatar: jdsavb374
+  birthdate: '2000-01-01'
+  date_hired: '2013-01-01'
+  department: Tech
+- id: 14
+  name: ThoughtBot
+  city: Denver
+  state: Colorado
+  avatar: ajkdbvqup4bi
+  birthdate: '1996-03-08'
+  date_hired: '2014-09-28'
+  department: Snack Management
+total: 14

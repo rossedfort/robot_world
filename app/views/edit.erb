@@ -13,10 +13,11 @@
         <textarea class='input-lg' name='robot[state]'><%= @robot.state %></textarea><br/>
         <textarea class='input-lg' name='robot[avatar]'><%= @robot.avatar %></textarea><br/>
         <textarea class='input-lg' name='robot[date_hired]'><%= @robot.date_hired %></textarea><br/>
-        <select name="robot[department]" placeholder="pick">
+        <select name="robot[department]">
           <option value='Snack Management'>Snack Management</option>
           <option value='Nap Management'>Nap Management</option>
           <option value='Tech'>Tech</option>
+          <option value='<%= @robot.department %>' selected><%= @robot.department %></option>
         </select><br><br>
         <input class='btn btn-xs btn-success' type='submit'/>
       </div>
