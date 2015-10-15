@@ -22,7 +22,9 @@ class RobotWorld
                                 'birthdate_day'    => robot[:birthdate_day],
                                 'birthdate_year'   => robot[:birthdate_year],
                                 'birthdate_month'  => robot[:birthdate_month],
-                                'date_hired'       => robot[:date_hired],
+                                'date_hired_year'  => robot[:date_hired_year],
+                                'date_hired_month' => robot[:date_hired_month],
+                                'date_hired_day'   => robot[:date_hired_day],
                                 'department'       => robot[:department]
                               }
       end
@@ -56,7 +58,9 @@ class RobotWorld
       target['city']             = data[:city]
       target['state']            = data[:state]
       target['avatar']           = data[:avatar]
-      target['date_hired']       = data[:date_hired]
+      target['date_hired_year']  = data[:date_hired_year]
+      target['date_hired_month'] = data[:date_hired_month]
+      target['date_hired_day']   = data[:date_hired_day]
       target['department']       = data[:department]
     end
   end

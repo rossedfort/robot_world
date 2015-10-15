@@ -10,6 +10,9 @@ robots:
   birthdate_month: '01'
   date_hired: '2015-10-13'
   department: Tech
+  date_hired_year: '2008'
+  date_hired_month: '01'
+  date_hired_day: '01'
 - id: 2
   name: CoolBot
   city: Denver
@@ -20,6 +23,9 @@ robots:
   birthdate_month: '01'
   date_hired: '2015-10-14'
   department: Nap Management
+  date_hired_year: '2010'
+  date_hired_month: 09
+  date_hired_day: '04'
 - id: 3
   name: SteveBot
   city: Denver
@@ -30,54 +36,32 @@ robots:
   birthdate_month: '06'
   date_hired: '2014-06-01'
   department: Tech
+  date_hired_year: '2014'
+  date_hired_month: '06'
+  date_hired_day: '01'
 - id: 4
   name: RandomBot
   city: Boulder
   state: Colorado
   avatar: random
-  birthdate_day: '16'
-  birthdate_year: '1998'
-  birthdate_month: 09
-  date_hired: '2010-01-01'
-  department: Snack Management
-- id: 5
-  name: HipBot
-  city: Portland
-  state: Oregon
-  avatar: sohipmuchwow
-  birthdate_day: '31'
-  birthdate_year: '1987'
-  birthdate_month: '02'
-  date_hired: '2011-10-10'
-  department: Nap Management
-- id: 6
-  name: AndrewBot
-  city: Denver
-  state: Colorado
-  avatar: hescool
-  birthdate_day: '14'
+  birthdate_day: '15'
   birthdate_year: '1990'
   birthdate_month: '07'
-  date_hired: '2015-08-01'
-  department: Tech
-- id: 7
-  name: JoanneBot
-  city: Colorado Springs
-  state: Colorado
-  avatar: shegivesusfood
-  birthdate_day: '00'
-  birthdate_year: '1980'
-  birthdate_month: '00'
-  date_hired: '2015-09-01'
-  department: Tech
-- id: 8
-  name: JeffBot
-  city: Washington
-  state: DC
-  avatar: herunsthisplace
-  birthdate_day: '10'
-  birthdate_year: '1986'
-  birthdate_month: '11'
-  date_hired: '2013-01-01'
+  date_hired: '2010-01-01'
+  department: Snack Management
+  date_hired_year: '2008'
+  date_hired_month: '07'
+  date_hired_day: '11'
+- id: 11
+  name: NewBot
+  city: Los Angeles
+  state: California
+  avatar: hesnew
+  birthdate_day: '14'
+  birthdate_year: '1993'
+  birthdate_month: '02'
+  date_hired_year: '2015'
+  date_hired_month: '10'
+  date_hired_day: '15'
   department: Nap Management
-total: 8
+total: 12
