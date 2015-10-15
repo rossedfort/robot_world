@@ -65,7 +65,7 @@ class RobotWorld
 
   def self.delete_all
     database.transaction do
-      database['tasks'] = []
+      database['robots'] = []
       database['total'] = 0
     end
   end
