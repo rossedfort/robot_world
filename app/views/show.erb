@@ -16,7 +16,7 @@
     <a id="edit" href="/bots/<%= @robot.id %>/edit"><button class="btn btn-info">Edit</button></a>
       <form action="/bots/<%= @robot.id %>" method="POST">
         <input type="hidden" name="_method" value="delete">
-        <button class="btn btn-warning" type="submit">Delete</button>
+        <button value="delete" class="btn btn-warning" type="submit">Delete</button>
       </form>
   </div>
 </div>
