@@ -8,7 +8,27 @@
         <h1>Edit Your Robot's Info:</h1>
         <input type="hidden" name="_method" value="PUT"/>
         <input class='input-lg' type='text' name='robot[name]' value="<%= @robot.name %>"/><br/><br>
-        <textarea class='input-lg' name='robot[birthdate]'><%= @robot.birthdate %></textarea><br/>
+        <label>Year:</label><select class="form-group" name="robot[birthdate_year]">
+          <% (1980..2015).each do |i| %>
+            <option value=<%= i %> ><%= i %></option>
+          <% end  %>
+        </select>
+        <label>Day:</label><select class="form-group" name="robot[birthdate_day]">
+          <% (0..9).each do |i| %>
+            <option value="0<%= i %>" >0<%= i %></option>
+          <% end  %>
+          <% (10..31).each do |i| %>
+            <option value=<%= i %> ><%= i %></option>
+          <% end  %>
+        </select>
+        <label>Month:</label><select class="form-group" name="robot[birthdate_month]">
+          <% (0..9).each do |i| %>
+            <option value="0<%= i %>" >0<%= i %></option>
+          <% end  %>
+          <% (10..12).each do |i| %>
+            <option value=<%= i %> ><%= i %></option>
+          <% end  %>
+        </select><br>
         <textarea class='input-lg' name='robot[city]'><%= @robot.city %></textarea><br/>
         <textarea class='input-lg' name='robot[state]'><%= @robot.state %></textarea><br/>
         <textarea class='input-lg' name='robot[avatar]'><%= @robot.avatar %></textarea><br/>

@@ -8,7 +8,7 @@
   <div id="info" class="row well text-center">
     <h1>Name: <%= @robot.name %></h1>
     <img src="https://robohash.org/<%= @robot.avatar %>.png">
-    <h4>Birthdate: <%= @robot.birthdate %></h4>
+    <h4>Birthdate: <%= @robot.birthdate_year %>-<%= @robot.birthdate_month %>-<%= @robot.birthdate_day %> </h4>
     <h4>City: <%= @robot.city %></h4>
     <h4>State: <%= @robot.state %></h4>
     <h4>Date Hired: <%= @robot.date_hired %></h4>

@@ -14,14 +14,16 @@ class RobotWorld
         database['robots'] ||= []
         database['total'] ||= 0
         database['total'] += 1
-        database['robots'] << { 'id'         => database['total'],
-                                'name'       => robot[:name],
-                                'city'       => robot[:city],
-                                'state'      => robot[:state],
-                                'avatar'     => robot[:avatar],
-                                'birthdate'  => robot[:birthdate],
-                                'date_hired' => robot[:date_hired],
-                                'department' => robot[:department]
+        database['robots'] << { 'id'               => database['total'],
+                                'name'             => robot[:name],
+                                'city'             => robot[:city],
+                                'state'            => robot[:state],
+                                'avatar'           => robot[:avatar],
+                                'birthdate_day'    => robot[:birthdate_day],
+                                'birthdate_year'   => robot[:birthdate_year],
+                                'birthdate_month'  => robot[:birthdate_month],
+                                'date_hired'       => robot[:date_hired],
+                                'department'       => robot[:department]
                               }
       end
   end
@@ -47,13 +49,15 @@ class RobotWorld
   def self.update(id, data)
     database.transaction do
       target = database['robots'].find {|robot| robot["id"] == id}
-      target['name']       = data[:name]
-      target['birthdate']  = data[:birthdate]
-      target['city']       = data[:city]
-      target['state']      = data[:state]
-      target['avatar']     = data[:avatar]
-      target['date_hired'] = data[:date_hired]
-      target['department'] = data[:department]
+      target['name']             = data[:name]
+      target['birthdate_day']    = data[:birthdate_day]
+      target['birthdate_month']  = data[:birthdate_month]
+      target['birthdate_year']   = data[:birthdate_year]
+      target['city']             = data[:city]
+      target['state']            = data[:state]
+      target['avatar']           = data[:avatar]
+      target['date_hired']       = data[:date_hired]
+      target['department']       = data[:department]
     end
   end
 
