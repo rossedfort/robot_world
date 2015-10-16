@@ -9,10 +9,5 @@ class ViewHomeTest < FeatureTest
       assert page.has_content?('Welcome to Robot World!')
     end
 
-    within('#options') do
-      assert page.has_content?('Press here to see all the Robots')
-      assert page.has_content?('Press here to add a new Robot')
-      assert page.has_content?('Press here to view the dashboard')
-    end
   end
 end
