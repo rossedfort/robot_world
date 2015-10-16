@@ -2,22 +2,15 @@ require_relative '../test_helper'
 
 class EditBotTest < FeatureTest
   def test_a_robot_can_be_edited
-    RobotWorld.create({:id         => 1,
-                       :name       => "Ross",
-                       :birthdate  => "1993-04-01",
-                       :city       => "Somerset",
-                       :state      => "New Jersey",
-                       :avatar     => "rossisthecoolest",
-                       :date_hired => "2015-10-13",
-                       :department => "Tech"
-                       })
+    create_robots(1)
+    robot = RobotWorld.all.first
 
-    visit '/bots/1'
-    assert_equal '/bots/1', current_path
+    visit "/bots/#{robot.id}"
+    assert_equal "/bots/#{robot.id}", current_path
 
     click_link('edit')
 
-    assert_equal '/bots/1/edit', current_path
+    assert_equal "/bots/#{robot.id}/edit", current_path
 
     fill_in('robot[name]', with: 'Bob')
     fill_in('robot[birthdate]', with: '1990-12-31')
@@ -29,7 +22,7 @@ class EditBotTest < FeatureTest
     click_button('submit')
 
     assert '/bots', current_path
-    visit '/bots/1'
+    visit "/bots/#{robot.id}"
 
     within('#info') do
       assert page.has_content?('Bob')

@@ -18,5 +18,6 @@ class MakeBotTest < FeatureTest
     robots = RobotWorld.all
 
     assert_equal 1, robots.count
+    assert page.has_content?("Ross")
   end
 end

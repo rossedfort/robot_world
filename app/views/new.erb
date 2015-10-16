@@ -1,68 +1,25 @@
 <div class='container-fluid navbar navbar-default'>
-  <a class='navbar navbar-brand navbar-link nav navbar-nav' href="/">Cancel</a>
+  <a class='navbar navbar-brand navbar-link nav navbar-nav' href='/'>Cancel</a>
 </div>
 
 <div class='container-fluid row text-center'>
-  <form action="/bots" method="post">
-    <div class="container-fluid">
+  <form action='/bots' method='post'>
+    <div class='container-fluid'>
       <div class='row well'>
         <h1>Make a New Bot!</h1>
         <input class='input-lg' type='text' name='robot[name]' placeholder='name'/><br><br>
-        <h5>Birthdate: </h5>
-          <label>Year</label><select class="form-group" name="robot[birthdate_year]">
-            <% (1980..2015).each do |i| %>
-              <option value=<%= i %> ><%= i %></option>
-            <% end  %>
-          </select>
-          <label>Day</label><select class="form-group" name="robot[birthdate_day]">
-            <% (0..9).each do |i| %>
-              <option value="0<%= i %>" >0<%= i %></option>
-            <% end  %>
-            <% (10..31).each do |i| %>
-              <option value=<%= i %> ><%= i %></option>
-            <% end  %>
-          </select>
-          <label>Month</label><select class="form-group" name="robot[birthdate_month]">
-            <% (0..9).each do |i| %>
-              <option value="0<%= i %>" >0<%= i %></option>
-            <% end  %>
-            <% (10..12).each do |i| %>
-              <option value=<%= i %> ><%= i %></option>
-            <% end  %>
-          </select><br>
-        <input class='input-sm form-group' name='robot[city]' placeholder='city'></input><br>
-        <input class='input-sm form-group' name='robot[state]' placeholder='state'></input><br>
-        <input class='input-sm form-group' name='robot[avatar]' placeholder='whatever you want :)'></input><br>
-        <h5>Date Hired:</h5>
-        <label>Year</label><select class="form-group" name="robot[date_hired_year]">
-          <% (2008..2015).each do |i| %>
-            <option value=<%= i %> ><%= i %></option>
-          <% end  %>
-        </select>
-        <label>Day</label><select class="form-group" name="robot[date_hired_day]">
-          <% (0..9).each do |i| %>
-            <option value="0<%= i %>" >0<%= i %></option>
-          <% end  %>
-          <% (10..31).each do |i| %>
-            <option value=<%= i %> ><%= i %></option>
-          <% end  %>
-        </select>
-        <label>Month</label><select class="form-group" name="robot[date_hired_month]">
-          <% (0..9).each do |i| %>
-            <option value="0<%= i %>" >0<%= i %></option>
-          <% end  %>
-          <% (10..12).each do |i| %>
-            <option value=<%= i %> ><%= i %></option>
-          <% end  %>
-        </select><br>
-
-        <select name="robot[department]">
-          <option value='Snack Management'>Snack Management</option>
-          <option value='Nap Management'>Nap Management</option>
-          <option value='Tech' selected>Tech</option>
-        </select><br><br>
-        <input value="submit" class='btn btn-xs btn-success' type='submit'/>
-      </div>
+          <textarea class='input-sm' name='robot[birthdate]' placeholder='birthdate yyyy-mm-dd'></textarea><br>
+          <textarea class='input-sm' name='robot[city]' placeholder='city'></textarea><br>
+          <textarea class='input-sm' name='robot[state]' placeholder='state'></textarea><br>
+          <textarea class='input-sm' name='robot[avatar]' placeholder='whatever you want :)'></textarea><br>
+          <textarea class='input-sm' name='robot[date_hired]' placeholder='date hired yyyy-mm-dd'></textarea><br>
+          <select name="robot[department]" placeholder="pick">
+            <option value='Snack Management'>Snack Management</option>
+            <option value='Nap Management'>Nap Management</option>
+            <option value='Tech' selected>Tech</option>
+          </select><br><br>
+          <input value="submit" class='btn btn-xs btn-success' type='submit'/>
+        </div>
     </div>
   </form>
 </div>

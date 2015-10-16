@@ -2,51 +2,32 @@ require_relative '../test_helper'
 
 class RobotWorldTest < Minitest::Test
   def test_a_robot_can_be_created
-    RobotWorld.create({:id         => 1,
-                       :name       => "Ross",
-                       :birthdate  => "1993-04-01",
-                       :city       => "Somerset",
-                       :state      => "New Jersey",
-                       :avatar     => "rossisthecoolest",
-                       :date_hired => "2015-10-13",
-                       :department => "Tech"
-                       })
+    create_robots(1)
 
-    robot = RobotWorld.find(1)
+    robot = RobotWorld.find(RobotWorld.all.first.id)
 
-    assert_equal 1, robot.id
-    assert_equal "Ross", robot.name
-    assert_equal "1993-04-01", robot.birthdate
-    assert_equal "Somerset", robot.city
-    assert_equal "New Jersey", robot.state
-    assert_equal "rossisthecoolest", robot.avatar
-    assert_equal "2015-10-13", robot.date_hired
-    assert_equal "Tech", robot.department
+    assert_equal "1 name", robot.name
+    assert_equal "1 birthdate", robot.birthdate
+    assert_equal "1 city", robot.city
+    assert_equal "1 state", robot.state
+    assert_equal "1 avatar", robot.avatar
+    assert_equal "1 date_hired", robot.date_hired
+    assert_equal "1 department", robot.department
   end
 
   def test_a_robot_can_be_edited
-    RobotWorld.create({:id         => 1,
-                       :name       => "Ross",
-                       :birthdate  => "1993-04-01",
-                       :city       => "Somerset",
-                       :state      => "New Jersey",
-                       :avatar     => "rossisthecoolest",
-                       :date_hired => "2015-10-13",
-                       :department => "Tech"
-                       })
+    create_robots(1)
+    RobotWorld.update(RobotWorld.all.first.id, {:name => "Bob",
+                                                :birthdate => "1990-12-31",
+                                                :city => "Denver",
+                                                :state => "Colorado",
+                                                :avatar => "bobiscooltoo",
+                                                :date_hired => "2012-09-21",
+                                                :department => "Nap Management"
+                                                })
 
-    RobotWorld.update(1, {:name       => "Bob",
-                          :birthdate  => "1990-12-31",
-                          :city       => "Denver",
-                          :state      => "Colorado",
-                          :avatar     => "bobiscooltoo",
-                          :date_hired => "2012-09-21",
-                          :department => "Nap Management"
-                          })
+    robot = RobotWorld.find(RobotWorld.all.first.id)
 
-    robot = RobotWorld.find(1)
-
-    assert_equal 1, robot.id
     assert_equal "Bob", robot.name
     assert_equal "1990-12-31", robot.birthdate
     assert_equal "Denver", robot.city
@@ -57,31 +38,14 @@ class RobotWorldTest < Minitest::Test
   end
 
   def test_a_robot_can_be_deleted
-    RobotWorld.create({:id         => 1,
-                       :name       => "Ross",
-                       :birthdate  => "1993-04-01",
-                       :city       => "Somerset",
-                       :state      => "New Jersey",
-                       :avatar     => "rossisthecoolest",
-                       :date_hired => "2015-10-13",
-                       :department => "Tech"
-                       })
+    create_robots(3)
+    total = RobotWorld.all.count
 
-    RobotWorld.create({:id         => 2,
-                       :name       => "Bob",
-                       :birthdate  => "1990-12-31",
-                       :city       => "Denver",
-                       :state      => "Colorado",
-                       :avatar     => "bobiscooltoo",
-                       :date_hired => "2012-09-21",
-                       :department => "Nap Management"
-                       })
-
-    RobotWorld.delete(2)
+    RobotWorld.delete(RobotWorld.all.first.id)
 
     robots = RobotWorld.all
 
-    assert_equal 1, robots.count
+    assert_equal (total -1), RobotWorld.all.count
   end
 
 

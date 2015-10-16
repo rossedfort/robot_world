@@ -2,17 +2,10 @@ require_relative '../test_helper'
 
 class DeleteBotTest < FeatureTest
   def test_a_robot_can_be_deleted
-    RobotWorld.create({:id         => 1,
-                       :name       => "Ross",
-                       :birthdate  => "1993-04-01",
-                       :city       => "Somerset",
-                       :state      => "New Jersey",
-                       :avatar     => "rossisthecoolest",
-                       :date_hired => "2015-10-13",
-                       :department => "Tech"
-                       })
+    create_robots(1)
+    robot = RobotWorld.all.first
 
-    visit '/bots/1'
+    visit "/bots/#{robot.id}"
 
     click_button('delete')
 

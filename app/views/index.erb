@@ -22,10 +22,10 @@
       <tr>
         <td> <a href="/bots/<%= bot.id %>"><img src="https://robohash.org/<%= bot.avatar %>.png" width="30" height="30"></a></td>
         <td> <%= bot.name %> </td>
-        <td> <%= bot.birthdate_year %>-<%= bot.birthdate_month %>-<%= bot.birthdate_day %> </td>
+        <td> <%= bot.birthdate %> </td>
         <td> <%= bot.city %> </td>
         <td> <%= bot.state %> </td>
-        <td> Date Hired: <%= bot.date_hired_year %>-<%= bot.date_hired_month %>-<%= bot.date_hired_day %> </td>
+        <td> <%= bot.date_hired %> </td>
         <td> <%= bot.department %> </td>
       </tr>
       <% end %>

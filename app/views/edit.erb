@@ -8,52 +8,12 @@
         <h1>Edit Your Robot's Info:</h1>
         <input type="hidden" name="_method" value="PUT"/>
         <input class='input-lg' type='text' name='robot[name]' value="<%= @robot.name %>"/><br/><br>
-        <label>Year:</label><select class="form-group" name="robot[birthdate_year]">
-          <% (1980..2015).each do |i| %>
-            <option value=<%= i %> ><%= i %></option>
-          <% end  %>
-        </select>
-        <label>Day:</label><select class="form-group" name="robot[birthdate_day]">
-          <% (0..9).each do |i| %>
-            <option value="0<%= i %>" >0<%= i %></option>
-          <% end  %>
-          <% (10..31).each do |i| %>
-            <option value=<%= i %> ><%= i %></option>
-          <% end  %>
-        </select>
-        <label>Month:</label><select class="form-group" name="robot[birthdate_month]">
-          <% (0..9).each do |i| %>
-            <option value="0<%= i %>" >0<%= i %></option>
-          <% end  %>
-          <% (10..12).each do |i| %>
-            <option value=<%= i %> ><%= i %></option>
-          <% end  %>
-        </select><br>
+        <input class="input-sm form-group" name="robot[birthdate]" placeholder="birthdate">
         <textarea class='input-lg' name='robot[city]'><%= @robot.city %></textarea><br/>
         <textarea class='input-lg' name='robot[state]'><%= @robot.state %></textarea><br/>
         <textarea class='input-lg' name='robot[avatar]'><%= @robot.avatar %></textarea><br/>
         <h5>Date Hired:</h5>
-        <label>Year:</label><select class="form-group" name="robot[date_hired_year]">
-          <% (2008..2015).each do |i| %>
-            <option value=<%= i %> ><%= i %></option>
-          <% end  %>
-        </select>
-        <label>Day:</label><select class="form-group" name="robot[date_hired_day]">
-          <% (0..9).each do |i| %>
-            <option value="0<%= i %>" >0<%= i %></option>
-          <% end  %>
-          <% (10..31).each do |i| %>
-            <option value=<%= i %> ><%= i %></option>
-          <% end  %>
-        </select>
-        <label>Month:</label><select class="form-group" name="robot[date_hired_month]">
-          <% (0..9).each do |i| %>
-            <option value="0<%= i %>" >0<%= i %></option>
-          <% end  %>
-          <% (10..12).each do |i| %>
-            <option value=<%= i %> ><%= i %></option>
-          <% end  %>
-        </select><br>
+        <input class="input-sm form-group" name="robot[date_hired]" placeholder="date hired">
         <select name="robot[department]">
           <option value='Snack Management'>Snack Management</option>
           <option value='Nap Management'>Nap Management</option>
