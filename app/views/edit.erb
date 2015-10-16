@@ -1,26 +1,47 @@
 <div class='container-fluid row text-center'>
   <form action="/bots/<%= @robot.id %>" method="post">
+
     <div class='container-fluid navbar navbar-default'>
       <a class='nav navbar-nav navbar-link navbar-btn navbar-brand' href="/bots">Back</a>
     </div>
+
     <div class="container-fluid">
       <div class='row well'>
         <h1>Edit Your Robot's Info:</h1>
-        <input type="hidden" name="_method" value="PUT"/>
-        <input class='input-lg' type='text' name='robot[name]' value="<%= @robot.name %>"/><br/><br>
-        <input class="input-sm form-group" name="robot[birthdate]" placeholder="birthdate">
-        <textarea class='input-lg' name='robot[city]'><%= @robot.city %></textarea><br/>
-        <textarea class='input-lg' name='robot[state]'><%= @robot.state %></textarea><br/>
-        <textarea class='input-lg' name='robot[avatar]'><%= @robot.avatar %></textarea><br/>
-        <h5>Date Hired:</h5>
-        <input class="input-sm form-group" name="robot[date_hired]" placeholder="date hired">
-        <select name="robot[department]">
-          <option value='Snack Management'>Snack Management</option>
-          <option value='Nap Management'>Nap Management</option>
-          <option value='Tech'>Tech</option>
-          <option value='<%= @robot.department %>' selected><%= @robot.department %></option>
-        </select><br><br>
-        <input value="submit" class='btn btn-xs btn-success' type='submit'/>
+
+        <div class="form-group col-md-12">
+          <input type="hidden" name="_method" value="PUT"/>
+
+          <label for="name" class="label label-info control-label">Name</label>
+          <input class='form-control input-lg' type='text' name='robot[name]' value="<%= @robot.name %>"/>
+
+          <label for="birthdate" class="label label-info control-label">Birthdate</label>
+          <input class="form-control input-sm form-group" pattern="\d{4}-\d{1,2}-\d{1,2}" name="robot[birthdate]" value="<%= @robot.birthdate %>">
+
+          <label for="city" class="label label-info control-label">City</label>
+          <input class='form-control input-sm' name='robot[city]' value="<%= @robot.city %>"></input>
+
+          <label for="state" class="label label-info control-label">State</label>
+          <input class='form-control input-sm' pattern="([A-Z]{2})" name='robot[state]' value="<%= @robot.state %>"></input>
+
+          <label for="avatar" class="label label-info control-label">Avatar Generator</label>
+          <input class='form-control input-sm' name='robot[avatar]' value="<%= @robot.avatar %>"></input>
+
+          <label for="date_hired" class="label label-info control-label">Date Hired</label>
+          <input class="form-control input-sm form-group" name="robot[date_hired]" value="<%= @robot.date_hired %>">
+        </div>
+
+        <div class="col-xs-4 col-xs-offset-4">
+          <label for="department" class="label label-info control-label">Department</label>
+          <select class="form-control" name="robot[department]">
+            <option value='Snack Management'>Snack Management</option>
+            <option value='Nap Management'>Nap Management</option>
+            <option value='Tech'>Tech</option>
+            <option value='<%= @robot.department %>' selected><%= @robot.department %></option>
+          </select><br>
+
+          <input value="submit" class='btn btn-xs btn-success' type='submit'/>
+        </div>
       </div>
     </div>
   </form>

@@ -7,19 +7,38 @@
     <div class='container-fluid'>
       <div class='row well'>
         <h1>Make a New Bot!</h1>
-        <input class='input-lg' type='text' name='robot[name]' placeholder='name'/><br><br>
-          <textarea class='input-sm' name='robot[birthdate]' placeholder='birthdate yyyy-mm-dd'></textarea><br>
-          <textarea class='input-sm' name='robot[city]' placeholder='city'></textarea><br>
-          <textarea class='input-sm' name='robot[state]' placeholder='state'></textarea><br>
-          <textarea class='input-sm' name='robot[avatar]' placeholder='whatever you want :)'></textarea><br>
-          <textarea class='input-sm' name='robot[date_hired]' placeholder='date hired yyyy-mm-dd'></textarea><br>
-          <select name="robot[department]" placeholder="pick">
+
+        <div class="form-group col-md-12">
+          <label for="name" class="label label-info control-label">Name</label>
+          <input class='form-control input-xs' type='text' name='robot[name]'/><br>
+
+
+          <label for="birthdate" class="label label-info">Birthdate</label>
+          <input class="form-control input-xs" id="robot-birthdate" pattern="\d{4}-\d{1,2}-\d{1,2}" name='robot[birthdate]' placeholder="(YYYY-MM-DD)"><br>
+
+          <label for="city" class="label label-info">City</label>
+          <input class='form-control input-xs' name='robot[city]'></input><br>
+
+          <label for="state" class="label label-info">State</label>
+          <input class='form-control input-xs' name='robot[state]' pattern="([A-Z]{2})" placeholder='Two Letter Code'></input><br>
+
+          <label for="avatar" class="label label-info">Avatar Generator</label>
+          <input class='form-control input-xs' name='robot[avatar]'placeholder="Put whatever you want here - The characters will be used to generate a unique avatar"></input><br>
+
+          <label for="hire date" class="label label-info">Date Hired</label>
+          <input class='form-control input-xs' name='robot[date_hired]' pattern="\d{4}-\d{1,2}-\d{1,2}" placeholder="(YYYY-MM-DD)"></input><br>
+        </div>
+
+        <div class="col-xs-4 col-xs-offset-4">
+          <label for="departmen" class="label label-info">Department</label>
+          <select class="form-control" name="robot[department]">
             <option value='Snack Management'>Snack Management</option>
             <option value='Nap Management'>Nap Management</option>
             <option value='Tech' selected>Tech</option>
-          </select><br><br>
+          </select><br>
           <input value="submit" class='btn btn-xs btn-success' type='submit'/>
         </div>
+      </div>
     </div>
   </form>
 </div>
