@@ -1,5 +1,3 @@
-require 'yaml/store'
-
 class RobotWorld
   def self.database
     if ENV["RACK_ENV"] == "test"
