@@ -9,22 +9,15 @@
     <h1 class='white-text'>Dashboard</h1>
   </div>
   <div class='container-fluid row well'>
-    <% time = Time.new %>
-    <% year = time.year %>
-    <% ages = @robots.map { |bot| year - bot.birthdate[0..4].to_i }.reduce(:+)/@robots.size  %>
-    <% years = @robots.map { |bot| bot.date_hired[0..4].to_i }.inject(Hash.new(0)) {|year,count| year[count] += 1; year }.sort %>
-    <% departments = @robots.map { |bot| bot.department }.inject(Hash.new(0)) {|department,count| department[count] += 1; department }.sort %>
-    <% cities = @robots.map { |bot| bot.city }.inject(Hash.new(0)) {|city,count| city[count] += 1; city }.sort %>
-    <% states = @robots.map { |bot| bot.state }.inject(Hash.new(0)) {|state,count| state[count] += 1; state }.sort %>
 
     <div class="text-center">
-      <h2>Average Age: <%= ages %> </h2>
+      <h2>Average Age: <%= @ages %> </h2>
     </div>
 
     <div class="row col-md-3 text-center">
       <h3>Hirees by Year:</h3>
       <table class="table table-striped table-bordered table-condensed">
-        <% years.each do |year, amount| %>
+        <% @years.each do |year, amount| %>
         <tr>
           <td> <%= year %> </td>
           <td> <%= amount %> </td>
@@ -36,7 +29,7 @@
     <div class="row col-md-2 col-md-offset-1 text-center">
       <h3>Departments:</h3>
       <table class="table table-striped table-bordered table-condensed">
-        <% departments.each do |department, amount| %>
+        <% @departments.each do |department, amount| %>
         <tr>
           <td> <%= department %> </td>
           <td> <%= amount %> </td>
@@ -48,7 +41,7 @@
     <div class="row col-md-2 col-md-offset-1 text-center">
       <h3>Cities:</h3>
       <table class="table table-striped table-bordered table-condensed">
-        <% cities.each do |city, amount| %>
+        <% @cities.each do |city, amount| %>
         <tr>
           <td> <%= city %> </td>
           <td> <%= amount %> </td>
@@ -60,7 +53,7 @@
     <div class="row col-md-2 col-md-offset-1 text-center">
       <h3>States:</h3>
       <table class="table table-striped table-bordered table-condensed">
-        <% states.each do |state, amount| %>
+        <% @states.each do |state, amount| %>
         <tr>
           <td> <%= state %> </td>
           <td> <%= amount %> </td>

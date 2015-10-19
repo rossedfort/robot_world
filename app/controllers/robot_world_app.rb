@@ -44,6 +44,13 @@ class RobotWorldApp < Sinatra::Base
 
   get '/dashboard' do
     @robots = RobotWorld.all
+    time = Time.new
+    year = time.year
+    @ages = @robots.map { |bot| year - bot.birthdate[0..4].to_i }.reduce(:+)/@robots.size
+    @years = @robots.map { |bot| bot.date_hired[0..4].to_i }.inject(Hash.new(0)) {|year,count| year[count] += 1; year }.sort
+    @departments = @robots.map { |bot| bot.department }.inject(Hash.new(0)) {|department,count| department[count] += 1; department }.sort
+    @cities = @robots.map { |bot| bot.city }.inject(Hash.new(0)) {|city,count| city[count] += 1; city }.sort
+    @states = @robots.map { |bot| bot.state }.inject(Hash.new(0)) {|state,count| state[count] += 1; state }.sort
     erb :dashboard
   end
 
